@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+
+// const auth = require('../middleware/auth.middleware');
+
+const { signIn, signUp } = require('../controller/admins/auth.controller');
+
+// USERS ROUTES
+router.post('/signUp', signUp);
+router.post('/signIn', signIn);
+
+module.exports = router;
