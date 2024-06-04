@@ -1,0 +1,431 @@
+{
+    "info": {
+        "_postman_id": "13dd6c97-d025-42d4-8302-80f0aa1af68b",
+        "name": "GVM-Event-Management",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "27739469"
+    },
+    "item": [
+        {
+            "name": "Users",
+            "item": [
+                {
+                    "name": "SignUp",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\":\"Vrajesh Ramani\",\r\n    \"email\": \"vrajesh.ramani@gmail.com\",\r\n    \"password\": \"Vrajesh@123\",\r\n    \"gender\":\"male\",\r\n    \"phoneNumber\":\"123456789\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/users/signUp",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "users",
+                                "signUp"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SignIn",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"email\": \"vrajesh.ramani@gmail.com\",\r\n    \"password\": \"Vrajesh@123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/users/signIn",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "users",
+                                "signIn"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Events",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWQwMTVlMGJhMWNhYmRkN2Q0YTciLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxNzUwMDQyNH0.fA27PxtJGl5SPG-PVm63pWD2owEQY7yE4JAx7Fl2VMk",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/event/getEvent",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "event",
+                                "getEvent"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Events By Id",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWQwMTVlMGJhMWNhYmRkN2Q0YTciLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxNzUwMDQyNH0.fA27PxtJGl5SPG-PVm63pWD2owEQY7yE4JAx7Fl2VMk",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/event/getEventById?id=665efa5329c91b63b7d77185",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "event",
+                                "getEventById"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "665efa5329c91b63b7d77185"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Purchase Events",
+                    "request": {
+                        "auth": {
+                            "type": "bearer",
+                            "bearer": [
+                                {
+                                    "key": "token",
+                                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWQwMTVlMGJhMWNhYmRkN2Q0YTciLCJ0eXBlIjoidXNlciIsImlhdCI6MTcxNzUwMDQyNH0.fA27PxtJGl5SPG-PVm63pWD2owEQY7yE4JAx7Fl2VMk",
+                                    "type": "string"
+                                }
+                            ]
+                        },
+                        "method": "POST",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/event/purchaseEventTicket?id=665eff48314cfdcc17178592",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "event",
+                                "purchaseEventTicket"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "665eff48314cfdcc17178592"
+                                }
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Admins",
+            "item": [
+                {
+                    "name": "Events",
+                    "item": [
+                        {
+                            "name": "Create Events",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWYyYTg3Yzc3ZTM5ZGViMWI4NGUiLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE3MTc0OTg4MDN9.VSsyTmIWSJBVY9c_nVLLOAag8qbWSnPV4eaiOoWq14g",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n\"eventName\": \"Event 2\",\r\n\"eventDate\": \"2024-05-29\",\r\n\"eventVenue\": \"Ahemdabad\",\r\n\"eventTotalTicket\": \"100\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:5000/v1/api/admin/event/createEvent",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "5000",
+                                    "path": [
+                                        "v1",
+                                        "api",
+                                        "admin",
+                                        "event",
+                                        "createEvent"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Update Events",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWYyYTg3Yzc3ZTM5ZGViMWI4NGUiLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE3MTc0OTg4MDN9.VSsyTmIWSJBVY9c_nVLLOAag8qbWSnPV4eaiOoWq14g",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "PATCH",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n\"eventName\": \"Event 1\"\r\n// \"eventDate\": \"04-06-2024\",\r\n// \"eventVenue\": \"Surat\",\r\n// \"eventTotalTicket\": \"100\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:5000/v1/api/admin/event/updateEvent?id=665ef43e88a4b4e7b5015827",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "5000",
+                                    "path": [
+                                        "v1",
+                                        "api",
+                                        "admin",
+                                        "event",
+                                        "updateEvent"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "id",
+                                            "value": "665ef43e88a4b4e7b5015827"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Delete Events",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWYyYTg3Yzc3ZTM5ZGViMWI4NGUiLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE3MTc0OTg4MDN9.VSsyTmIWSJBVY9c_nVLLOAag8qbWSnPV4eaiOoWq14g",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "http://localhost:5000/v1/api/admin/event/deleteEvent?id=665efa5329c91b63b7d77185",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "5000",
+                                    "path": [
+                                        "v1",
+                                        "api",
+                                        "admin",
+                                        "event",
+                                        "deleteEvent"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "id",
+                                            "value": "665efa5329c91b63b7d77185"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Get Events",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjVlZWYyYTg3Yzc3ZTM5ZGViMWI4NGUiLCJ0eXBlIjoiYWRtaW4iLCJpYXQiOjE3MTc0OTg4MDN9.VSsyTmIWSJBVY9c_nVLLOAag8qbWSnPV4eaiOoWq14g",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\r\n\"eventName\": \"Event 1\",\r\n\"eventDate\": \"04-06-2024\",\r\n\"eventVenue\": \"Surat\",\r\n\"eventTotalTicket\": \"100\"\r\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "http://localhost:5000/v1/api/admin/event/getEvent",
+                                    "protocol": "http",
+                                    "host": [
+                                        "localhost"
+                                    ],
+                                    "port": "5000",
+                                    "path": [
+                                        "v1",
+                                        "api",
+                                        "admin",
+                                        "event",
+                                        "getEvent"
+                                    ]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "SignUp",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"name\":\"Vrajesh Ramani\",\r\n    \"email\": \"vrajesh.ramani@gmail.com\",\r\n    \"password\": \"Vrajesh@123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/admin/signUp",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "admin",
+                                "signUp"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "SignIn",
+                    "request": {
+                        "method": "POST",
+                        "header": [],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\r\n    \"email\": \"vrajesh.ramani@gmail.com\",\r\n    \"password\": \"Vrajesh@123\"\r\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "http://localhost:5000/v1/api/admin/signIn",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000",
+                            "path": [
+                                "v1",
+                                "api",
+                                "admin",
+                                "signIn"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
+}
